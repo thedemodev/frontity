@@ -1,5 +1,6 @@
 import { fetch } from "frontity";
 import { stringify } from "query-string";
+import { Response } from "node-fetch";
 
 class Api {
   api = "";
@@ -44,7 +45,7 @@ class Api {
     return fetch(`${requestUrl}${query && "?"}${query}`).then(response => {
       if (!response.ok) {
         const { status, statusText } = response;
-        throw { status, statusText, isFrontityError: true };
+        throw { status, statusText, isServerError: true };
       }
       return response;
     });

@@ -1,3 +1,5 @@
+import { Response } from "node-fetch";
+
 export const getTotal = (response: Response): number =>
   parseInt(response.headers.get("X-WP-Total"));
 

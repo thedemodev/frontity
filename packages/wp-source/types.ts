@@ -1,3 +1,4 @@
+import { Response } from "node-fetch";
 import { Action, State, Derived } from "frontity/types";
 import Source from "@frontity/source";
 import { EntityData } from "@frontity/source/src/data";
